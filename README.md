@@ -73,135 +73,172 @@ Online-E-Commerce-Platform/
 │   └── ojdbc17.jar
 │
 └── README.md
-Database
+```
+
+## Database
 
 The project uses Oracle Database 11g XE for storing and managing application data.
 
-Main Tables
-USERS
-PRODUCTS
-ORDERS
-ORDER_ITEMS
-CART
-Database Script
+### Main Tables
+
+- USERS
+- PRODUCTS
+- ORDERS
+- ORDER_ITEMS
+- CART
+
+### Database Script
 
 The complete database setup script is available in:
 
-database/database.sql
+`database/database.sql`
 
-JDBC Configuration
+## JDBC Configuration
 
 The application uses JDBC to connect Java with Oracle Database.
 
-Database Connection
+### Database Connection
+
+```text
 jdbc:oracle:thin:@localhost:1521:XE
-JDBC Driver
+```
+
+### JDBC Driver
 
 The Oracle JDBC driver used in the project is:
 
-ojdbc17.jar
+`ojdbc17.jar`
 
 The driver is stored inside:
 
-lib/
+`lib/`
 
-Requirements
+## Requirements
 
 Before running the project, make sure you have:
 
-Java JDK installed
-Oracle Database 11g XE installed
-Oracle JDBC Driver (ojdbc17.jar)
-VS Code or any Java IDE
-Database Setup
-Start Oracle Database 11g XE.
-Open your Oracle SQL environment.
-Connect to your Oracle database.
-Open the following file:
+- Java JDK installed
+- Oracle Database 11g XE installed
+- Oracle JDBC Driver (`ojdbc17.jar`)
+- VS Code or any Java IDE
 
-database/database.sql
+## Database Setup
 
-Execute the SQL script.
+1. Start Oracle Database 11g XE.
+2. Open your Oracle SQL environment.
+3. Connect to your Oracle database.
+4. Open the following file:
+
+`database/database.sql`
+
+5. Execute the SQL script.
 
 The script creates the required tables, sequences, and sample data.
 
-Compile and Run
-Compile
+## Compile and Run
 
-Open the terminal inside the SRC folder and run:
+### Compile
 
+Open the terminal inside the `SRC` folder and run:
+
+```powershell
 javac -cp ".;..\lib\ojdbc17.jar" *.java
-Run
+```
+
+### Run
 
 After successful compilation, run:
 
+```powershell
 java -cp ".;..\lib\ojdbc17.jar" LoginFrame
+```
 
 The Login screen will open.
 
-Sample Login Credentials
-Admin
+## Sample Login Credentials
+
+### Admin
+
+```text
 Email: admin@gmail.com
 Password: admin123
-Seller
+```
+
+### Seller
+
+```text
 Email: seller@gmail.com
 Password: seller123
-Buyer
+```
+
+### Buyer
+
+```text
 Email: buyer@gmail.com
 Password: buyer123
-OOP Concepts Used
+```
+
+## OOP Concepts Used
 
 The project demonstrates the following Object-Oriented Programming concepts:
 
-Classes and Objects
-Inheritance
-Polymorphism
-Interface
-Encapsulation
-Exception Handling
-Collections and Generics
+- Classes and Objects
+- Inheritance
+- Polymorphism
+- Interface
+- Encapsulation
+- Exception Handling
+
+## Collections and Generics
 
 The project uses Java Collections and Generics for managing product data.
 
 Concepts used:
 
-ArrayList
-List
-Generics
+- ArrayList
+- List
+- Generics
 
 Example:
 
+```java
 ProductList<String>
-Multithreading and Synchronization
+```
 
-The project demonstrates multithreading using Java's Thread class.
+## Multithreading and Synchronization
+
+The project demonstrates multithreading using Java's `Thread` class.
 
 Synchronization is used to safely process orders and manage shared data.
 
-DAO
+## DAO
 
 Data Access Object (DAO) classes are used to separate database operations from the application interface.
 
 DAO classes include:
 
-ProductDAO
-UserDAO
-OrderDAO
-CartDAO
-JDBC
+- ProductDAO
+- UserDAO
+- OrderDAO
+- CartDAO
+
+## JDBC
 
 JDBC is used to connect the Java application with Oracle Database.
 
 JDBC is used for:
 
-Connecting to the database
-Executing SQL queries
-Inserting data
-Retrieving data
-Updating data
-Deleting data
-Processing orders
-Application Flow
+- Connecting to the database
+- Executing SQL queries
+- Inserting data
+- Retrieving data
+- Updating data
+- Deleting data
+- Processing orders
+
+## Application Flow
+
+```text
 Login / Register
        |
        v
@@ -222,22 +259,22 @@ Orders Orders Place Order
               |
               v
          Order History
-Project Highlights
-Role-based user access
-Java Swing graphical interface
-Oracle database integration
-JDBC connectivity
-Product management
-Shopping cart
-Order processing
-Order history
-DAO architecture
-OOP implementation
-Collections and Generics
-Multithreading and Synchronization
-Author
+```
 
-Developed as an academic project for the GUVI Project Review.
+## Project Highlights
+
+- Role-based user access
+- Java Swing graphical interface
+- Oracle database integration
+- JDBC connectivity
+- Product management
+- Shopping cart
+- Order processing
+- Order history
+- DAO architecture
+- OOP implementation
+- Collections and Generics
+- Multithreading and Synchronization
 
 ## Team Members
 
@@ -248,4 +285,8 @@ Developed as an academic project for the GUVI Project Review.
 | Rajat Sharma | Team Member |
 | Avnish Solanki | Team Member |
 
-Project: Online E-Commerce Platform
+## Author
+
+Developed as an academic project for the GUVI Project Review.
+
+**Project:** Online E-Commerce Platform
