@@ -6,9 +6,11 @@ public class DBConnection {
     private static final String URL =
             "jdbc:oracle:thin:@localhost:1521:XE";
 
-    private static final String USER = "ANIKETYADAV";
+    private static final String USER =
+            System.getenv("ECOMMERCE_DB_USER");
 
-    private static final String PASSWORD = "Ecommerce123";
+    private static final String PASSWORD =
+            System.getenv("ECOMMERCE_DB_PASSWORD");
 
     public static Connection getConnection() {
 
